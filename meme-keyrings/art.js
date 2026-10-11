@@ -232,7 +232,7 @@ export const PRODUCTS = [
     line: 'Tung tung tung tung tung tung tung tung tung… SAHUR.',
     tag: 'Bestseller',
     hue: '#dba46a',
-    photo: null,
+    photo: 'images/tung-tung-tung-sahur.jpg',
   },
   {
     slug: 'ballerina-cappuccina',
@@ -293,10 +293,10 @@ export const PRODUCTS = [
   {
     slug: 'hypergamy',
     name: 'Hypergamy',
-    line: 'For the friend who only dates up.',
+    line: 'The chart that starts an argument in every group chat.',
     tag: null,
     hue: '#c25bff',
-    photo: null,
+    photo: 'images/hypergamy.jpg',
   },
 ]
 
@@ -333,7 +333,7 @@ async function loadSource(slug) {
 
 // Turns any image into a die-cut sticker: thick white outline + art on top.
 function stickerize(img, photo) {
-  const pad = 40
+  const pad = photo ? 22 : 40
   const inner = SIZE - pad * 2
   const art = document.createElement('canvas')
   art.width = art.height = SIZE
